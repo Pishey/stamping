@@ -1,0 +1,271 @@
+*{
+    margin: 0px ;
+    padding: 0px ;
+    box-sizing: border-box ;
+}
+body{
+    font-family: 'Pridi', serif;
+} 
+header{
+    background-image: url(/image/header.jpeg);
+    background-size: cover;
+    width: 99vw;
+    height: 25vw;
+
+}
+header nav {
+    display: flex;
+    justify-content:flex-end;
+
+}
+header .logo{
+    cursor: pointer;
+    margin-right: auto;
+
+
+}
+header .logo img{
+    width: 15vw;
+}
+header nav ul{
+    list-style: none;
+  
+}
+header nav ul li{
+    transition: all  0.3s;
+    display: inline-block;
+    padding: 0px 10px;
+}
+header nav ul li:hover{
+    transform: scale(1.2);
+}
+header nav ul li a{
+    list-style: none;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ed9609;
+    
+}
+header nav ul li a:hover{
+    color: #fff;
+}
+main{
+    margin: 0 auto;
+    /*width: 90vw;*/
+}
+.menu-hamburgesa{
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px 0px 20px 0px;
+    border-radius: 5px;
+}
+
+main div h1{
+    background-color: black;
+    color: #fff;
+    text-align: center;
+}
+
+main .seccion-barber{
+    background-color: #ed6009;
+}
+main .seccion-barber div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+}
+main .seccion-barber div article{
+    width: 33,2%;
+    margin-top: 30px; 
+}
+
+main .seccion-barber div article img{
+    border-radius: 50%; 
+}
+main .seccion-barber div article h2{
+    text-align: center;
+    margin-top: 10px;
+    color: black;
+    margin-bottom: 30px;
+    
+}
+main  h3{
+    color:#fff;
+    text-align: center;
+    background-color: black;
+    font-size: 32px;
+}
+main .seccion-galery{
+    /*border: solid 1px red;*/
+    width: 90%;
+    height: 700px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 5px;
+    padding: 5px 5px;
+}
+.caja{
+    background-color: #a1844e;
+}
+.imagen1{
+    background: url(/image/galeri1.jpg) no-repeat center/cover;
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+.caja:nth-child(2){
+    background: url(/image/galeria2.jpeg) no-repeat center/cover;
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+.caja:nth-child(3){
+    background: url(/image/galeria3.jpg) no-repeat center/cover;
+    grid-column: 3/5;
+    grid-row: 1/2;
+}
+.caja:nth-child(4){
+    background: url(/image/galeria4.jpeg) no-repeat center/cover;
+    grid-column: 3/4;
+    grid-row: 2/3;
+   
+}
+.caja:nth-child(5){
+    background: url(/image/galeria5.jpeg) no-repeat center/cover;
+    grid-column: 4/5;
+    grid-row: 2/4;
+}
+.caja:nth-child(6){
+    background: url(/image/galeria6.jpg) no-repeat center/cover;
+    grid-column: 1/3;
+    grid-row: 3/4;
+}
+.caja:nth-child(7){
+    background: url(/image/galeria7.jpeg) no-repeat center/cover;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+.caja:nth-child(8){
+    background: url(/image/galeria.jpg) no-repeat center/cover;
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+main .seccion-productos{
+    border: solid 4px green;
+}
+main section article{
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border: solid 1px red;
+
+}
+main .productos article img{
+    width: 40vw;
+}
+main .informacion-article{
+    border-top: solid 1px black;
+    padding: 15px;
+    background-color: rgba(143, 87, 46, 0.278);
+}
+.precio{
+    font-size: 25px;
+}
+.descuento{
+    font-size: 25px;
+    color: green;
+    font-weight: 30px;
+}
+.desc-prod{
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+}
+
+footer{
+    background: linear-gradient(180deg,#ed6009 , #a1844e);
+    text-align: center;
+}
+
+footer div h4{
+    text-align: center;
+    font-size: 25px;
+}
+footer div ul li a{
+    list-style: none;
+    text-decoration: none;
+}
+footer div ul{
+    list-style: none;
+}
+footer div h5{
+    text-align: center;
+}
+
+main .crearCuenta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.text-cuenta input{
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.botonCuenta{
+    width: 10vw;
+    height: 2vw;
+    background-color: #ed6009;
+    margin-top: 10px;
+}
+
+main .formularios{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.text-field{
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.botonform{
+    width: 10vw;
+    height: 2vw;
+    background-color: #ed6009;
+    margin-top: 10px;
+}
+
+@media (min-width : 800px){
+    .menu-hamburgesa{
+        display: none;
+    }
+    .productos{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    main section .productos img{
+        width: 20vw;
+    }
+    .desc-prod{
+        font-size: 30px;
+        display: flex;
+        justify-content: flex-start;
+    }
+    footer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    footer div{
+        width: 25%;
+    }
+   
+}
