@@ -4,7 +4,7 @@
     box-sizing: border-box ;
 }
 body{
-    font-family: 'Pridi', serif;
+    font-family: 'Times New Roman'
 } 
 header{
     background-color: #0a0908;
@@ -75,11 +75,7 @@ main .seccion-productos div{
 }
 main .seccion-productos div article{
     width: 33,2%;
-    margin-top: 30px; 
-}
-
-main .seccion-productos div article img{
-    border-radius: 0%; 
+    margin-top: 60px; 
 }
 main .seccion-productos div article h2{
     text-align: center;
@@ -127,6 +123,7 @@ main .informacion-article{
 
 footer{
     text-align: center;
+    margin: 1.5%;
 }
 
 footer div h4{
