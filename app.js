@@ -4,8 +4,8 @@ const app = express();
 app.use(express.static("public"));
 
 
-const mainRouter = require("../proyectoRecu/src/router/mainRouter");
-const productRouter = require("../proyectoRecu/src/router/productRouter")
+const mainRouter = require("../stamping/src/router/mainRouter");
+const productRouter = require("../stamping/src/router/productRouter")
 
 
 app.listen( 3000,()=>{
