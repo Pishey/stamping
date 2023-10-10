@@ -7,9 +7,9 @@ body{
     font-family: 'Pridi', serif;
 } 
 header{
-    background-color: #228688;
+    background-color: #0a0908;
     width: 99vw;
-    height: 18vw;
+    height: 11vw;
 
 }
 header nav {
@@ -64,7 +64,7 @@ main div h1{
 }
 
 main .seccion-productos{
-    background-color: #228688;
+    background-color: #000;
 }
 main .seccion-productos div{
     display: flex;
@@ -84,18 +84,15 @@ main .seccion-productos div article img{
 main .seccion-productos div article h2{
     text-align: center;
     margin-top: 10px;
-    color: black;
+    color: #c6ac8f;
     margin-bottom: 30px;
     
 }
 main  h3{
     color:#fff;
     text-align: center;
-    background-color: black;
+    background-color: #c6ac8f;
     font-size: 32px;
-}
-.caja{
-    background-color: #a1844e;
 }
 
 main .seccion-product{
@@ -134,7 +131,7 @@ footer{
 
 footer div h4{
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
 }
 footer div ul li a{
     list-style: none;
@@ -142,9 +139,6 @@ footer div ul li a{
 }
 footer div ul{
     list-style: none;
-}
-footer div h5{
-    text-align: center;
 }
 
 main .crearCuenta{
@@ -162,7 +156,7 @@ main .crearCuenta{
 .botonCuenta{
     width: 10vw;
     height: 2vw;
-    background-color: #ed6009;
+    background-color: #c6ac8f;
     margin-top: 10px;
 }
 
@@ -181,7 +175,7 @@ main .formularios{
 .botonform{
     width: 10vw;
     height: 2vw;
-    background-color: #ed6009;
+    background-color: #c6ac8f;
     margin-top: 10px;
 }
 

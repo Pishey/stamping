@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head",{title:"STAMPING"}) %>
+<body>
+    <%- include("./partials/headers") %>
+    <main>
+        <div><h1> REGISTRATE</h1></div>
+            <form class="formularios" action="/register" method="POST">
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input class="text-field" type="text" name="nombre"  id= "nombre" placeholder="Nombre">
+                </div>
+                <div>
+                    <label for="apellido">Apellido:</label>
+                    <input class="text-field" type="text" name="apellido" id= "apellido" placeholder="Apellido">
+                </div>
+                <div>
+                    <label for="email">E-mail:</label>
+                    <input class="text-field" type="email" name="email" id= "email" placeholder="E-mail">
+                </div>
+            
+                
+                <div>
+                    <label for="fotoRegister">Foto de Usuario:</label>
+                    <input type="file" name="fotoRegister" accept=".jpg, .png, .jpeg, .gif" id="fotoRegister">
+                </div>
+                <div>
+                    <label for="contrasenia">Contraseña:</label>
+                    <input class="text-field" type="password" name="contrasenia"  id="contrasenia" placeholder="Contraseña">  
+                </div>
+                <div>
+                    <label for="confirmarContrasenia">Confirmar Contraseña:</label>
+                    <input class="text-field" type="password" name="confirmarContrasenia"  id="confirmarContrasenia" placeholder="Confirmar Contraseña">
+                </div>
+                    
+                <div>
+                    <button class="botonform botonsubmit" type="submit">Enviar</button>
+                    <button class="botonform botonreset"type="reset">Cancelar</button>
+                </div>
+                
+            </form>
+    </main>
+    <%- include ("./partials/footer") %>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head",{title:"STAMPING"}) %>
+<body>
+    <%- include("./partials/headers") %>
+    <main>
+        <div><h1>USUARIO</h1></div>
+             <form class="crearCuenta" action="/" method="GET">
+                <div class="text-cuenta">
+                    <label for="emailLogin">E-mail:</label>
+                    <input type="text" name="emailLogin" id="emailLogin" placeholder="E-mail">
+                </div>
+                <div class="text-cuenta">
+                    <label for="contrasenia">Contraseña:</label>
+                    <input type="password" name="contraenia" id="contrasenia" placeholder="Contraseña">
+                </div>
+                <div class="botttonCuenta">
+                    <button class="botonCuenta" type="submit">Enviar</button>
+                </div>
+            </form>
+            
+    </main>
+    <%- include ("./partials/footer") %>
+</body>
+</html>
