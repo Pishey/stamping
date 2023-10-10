@@ -1,12 +1,10 @@
 const path = require("path");
 
-const controller = {
+const userControllerontroller = {
 
-    home: (res,req)=>{
-        res.render("home");
+    user: function(res,req){
+        res.sendFile(path.resolve("./views/user.html"));
     }
-
-
 }
 
 module.exports = userController;
