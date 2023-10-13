@@ -1,7 +1,7 @@
 const path = require("path");
 const fs = require("fs");
 
-const rutaArchivo = path.resolve("./src/database/user.json");
+const rutaArchivo = path.resolve("./src/database/user.JSON");
 const registerNew = JSON.parse(fs.readFileSync(rutaArchivo));
 
 const userController = {
@@ -15,7 +15,7 @@ const userController = {
         res.render("register")
     },
     processRegister:(req,res) =>{
-        let userNuevo ={
+        let usuario ={
             id: registerNew.length+1,
             nombre: req.body.nombre,
             apellido: req.body.apellido,
@@ -25,11 +25,11 @@ const userController = {
             confirmarContra: req.body.confirmarContrasenia,
             borrado: false
         }
-        fs.writeFileSync(rutaArchivo,JSON.stringify([...registerNew,userNuevo],null,2),"utf-8")
+        fs.writeFileSync(rutaArchivo,JSON.stringify([...registerNew,usuario],null,2),"utf-8")
         return res.redirect("/home")
     },
     editarUser:(req,res) =>{
-
+        res.render("editar")
     }
      
 

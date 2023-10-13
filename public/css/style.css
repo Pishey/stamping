@@ -91,36 +91,6 @@ main  h3{
     font-size: 32px;
 }
 
-main .seccion-product{
-    border: solid 4px green;
-}
-main section article{
-    padding: 10px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-main .productos article img{
-    width: 40vw;
-}
-main .informacion-article{
-    border-top: solid 1px black;
-    padding: 15px;
-    background-color: #fff;
-}
-.precio{
-    font-size: 25px;
-}
-.descuento{
-    font-size: 25px;
-    color: green;
-    font-weight: 30px;
-}
-.desc-prod{
-    font-size: 35px;
-    display: flex;
-    justify-content: center;
-}
-
 footer{
     text-align: center;
     margin: 1.5%;
@@ -154,6 +124,7 @@ main .crearCuenta{
     width: 10vw;
     height: 2vw;
     background-color: #c6ac8f;
+    border-radius: 15px;
     margin-top: 10px;
 }
 
@@ -173,26 +144,11 @@ main .formularios{
     width: 10vw;
     height: 2vw;
     background-color: #c6ac8f;
+    border-radius: 15px;
     margin-top: 10px;
 }
 
 @media (min-width : 800px){
-    .menu-hamburgesa{
-        display: none;
-    }
-    .productos{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-    main section .productos img{
-        width: 20vw;
-    }
-    .desc-prod{
-        font-size: 30px;
-        display: flex;
-        justify-content: flex-start;
-    }
     footer{
         display: flex;
         flex-wrap: wrap;

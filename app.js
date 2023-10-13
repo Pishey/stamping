@@ -19,7 +19,7 @@ app.listen( 3000,()=>{
 })
 
 app.use("/", mainRouter);
-app.use("/products", productRouter);
+app.use("/", productRouter);
 app.use("/", userRouter);
 
 app.use((req,res) => {
