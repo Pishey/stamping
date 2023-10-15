@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include ("./partials/head"), ({title: "STAMPING"})%>
+
+<body>
+    <%- include ("./partials/header")%>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .profile-images {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #ccc;
+            margin: 0 auto;
+        }
+
+        .edit-container {
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .edit-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .edit-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .edit-form label {
+            font-weight: bold;
+        }
+
+        .edit-form input {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .edit-form button {
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .edit-form button:hover {
+            background: #0056b3;
+        }
+    </style>
+
+
+    <div class="edit-container">
+        <div class="edit-header">
+            <h2>Modificar Usuario</h2>
+        </div>
+        <div>
+            <img class="profile-images" src="/image/<%= users.fotoRegistro %>" alt="fotoPerfil"/>
+        </div>
+        <form class="edit-form" method="POST" action="/user/modifUsuario/<%=users.id %>?_method=PUT" enctype="multipart/form-data">
+            
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre"  value="<%=users.nombre%>">
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido"  value="<%=users.apellido%>">
+
+            <label for="domicilio">Domicilio:</label>
+            <input type="text" id="domicilio" name="domicilio"  value="<%=users.domicilio%>">
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email"  value="<%=users.email%>">
+
+            <label for="fotoRegistro">Cambiar foto de perfil</label>
+            <input type="file" name="fotoRegistro" accept=".jpg, .png, .jpeg, .gif" id="fotoRegistro" value="<%=users.fotoRegistro%>">
+
+            <button type="submit" href="/">Guardar Cambios</button>
+        </form>
+    </div>
+</body>
+<%- include ("./partials/footer")%>
+</html>

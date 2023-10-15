@@ -1,12 +1,3 @@
 [
-    {},
-    {
-        "id": 2,
-        "nombre": "lauta",
-        "apellido": "aa",
-        "email": "jhasgdja@hotmail.com",
-        "contrasenia": "1234",
-        "confirmarContra": "1234",
-        "borrado": false
-    }
+    {}
 ]

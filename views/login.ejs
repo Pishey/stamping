@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <%- include("./partials/head",{title:"STAMPING"}) %>
+
 <body>
-    <%- include("./partials/headers") %>
+    <%- include("./partials/header") %>
     <main>
         <div><h1>USUARIO</h1></div>
-             <form class="crearCuenta" action="/" method="GET">
+             <form class="crearCuenta" action="/user/login" method="GET">
                 <div class="text-cuenta">
                     <label for="emailLogin">E-mail:</label>
                     <input type="text" name="emailLogin" id="emailLogin" placeholder="E-mail">
