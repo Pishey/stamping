@@ -1,27 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include("./partials/head",{title:"STAMPING"}) %>
-
+<%- include("./partials/head",{title:"Stamping"}) %>
+<style>
+    /*body {
+        font-family: 'Times New Roman', Times, serif ;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }*/
+    
+    .login-container {
+        background: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+    }
+    
+    .login-container h2 {
+        text-align: center;
+    }
+    
+    .login-form {
+        margin-top: 20px;
+    }
+    
+    .login-form label,
+    .login-form input {
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    .login-form input[type="text"],
+    .login-form input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    .login-form button {
+        width: 100%;
+        background: #007BFF;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .login-form button:hover {
+        background: #0056b3;
+    }
+        </style>
 <body>
     <%- include("./partials/header") %>
-    <main>
-        <div><h1>USUARIO</h1></div>
-             <form class="crearCuenta" action="/user/login" method="GET">
-                <div class="text-cuenta">
-                    <label for="emailLogin">E-mail:</label>
-                    <input type="text" name="emailLogin" id="emailLogin" placeholder="E-mail">
-                </div>
-                <div class="text-cuenta">
-                    <label for="contrasenia">Contraseña:</label>
-                    <input type="password" name="contraenia" id="contrasenia" placeholder="Contraseña">
-                </div>
-                <div class="botttonCuenta">
-                    <button class="botonCuenta" type="submit">Enviar</button>
-                </div>
-            </form>
+    <title>Iniciar Sesión</title>
+    
+
+    <div class="login-container">
+        <h2>Iniciar Sesión</h2>
+        <form class="login-form" action="/user/login" method="post">
+
             
-    </main>
+            <input type="email" name="loginEmail" placeholder="E-mail de usuario" >
+
+            
+            <input type="password"  name="loginContrasenia" placeholder="Contraseña" >
+
+            <% if(locals.errors && errors.datosMal){ %>
+                <p><%= errors.datosMal.msg  %></p>
+            <% } %>
+            
+            <label for="cookie">Recordarme</label>
+            <input type="checkbox" name="cookie" id="cookie">
+
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+    </div>
     <%- include ("./partials/footer") %>
 </body>
 </html>

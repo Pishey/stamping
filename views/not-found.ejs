@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include ("./partials/head"), ({title: "Stamping"})%>
+<body>
+    <%- include ("./partials/header")%>
+    <style>
+     body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.error-container {
+    text-align: center;
+    margin-top: 20%;
+}
+
+.error {
+    font-size: 36px;
+    color: #333;
+}
+
+.errorp {
+    font-size: 18px;
+    color: #555;
+}
+
+.errora {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    font-size: 25px;
+}
+    </style>
+    
+        <div class="error-container">
+            <h1 class="error">Error 404 - Página no encontrada</h1>
+            <p class="errop">La página que estás buscando no existe o ha sido eliminada.</p>
+            <a class="errora" href="/">Volver a la página de inicio</a>
+        </div>
+   
+</body>
+<%- include ("./partials/footer")%>
+</html>

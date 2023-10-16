@@ -1,3 +1,13 @@
 [
-    {}
+  {},
+  {
+    "id": 2,
+    "nombre": "Lautaro",
+    "apellido": "Andrades",
+    "domicilio": "das",
+    "fotoRegistro": "fotoUsuario - 1697455593217.JPG",
+    "email": "las@gmail.com",
+    "contraseñia": "alcaojwjdasd",
+    "borrado": false
+  }
 ]

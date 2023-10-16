@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include ("./partials/head"), ({title: "STAMPING"})%>
+<%- include ("./partials/head"), ({title: "Stamping"})%>
 
 <body>
     <%- include ("./partials/header")%>
@@ -23,7 +23,7 @@
         .edit-container {
             background: #fff;
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(9, 222, 250, 0);
             max-width: 600px;
             margin: 0 auto;
             padding: 20px;
@@ -79,9 +79,6 @@
 
             <label for="apellido">Apellido:</label>
             <input type="text" id="apellido" name="apellido"  value="<%=users.apellido%>">
-
-            <label for="domicilio">Domicilio:</label>
-            <input type="text" id="domicilio" name="domicilio"  value="<%=users.domicilio%>">
 
             <label for="email">Correo Electrónico:</label>
             <input type="email" id="email" name="email"  value="<%=users.email%>">

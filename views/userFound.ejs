@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include ("./partials/head"), ({title: "Stamping"})%>
+
+<body>
+    
+    <%- include ("./partials/header")%>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .profile-container {
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #ccc;
+            margin: 0 auto;
+        }
+
+        .profile-name {
+            font-size: 25px;
+            margin-top: 10px;
+        }
+
+        .profile-details {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+
+        .profile-details label {
+            font-weight: bold;
+        }
+
+        .profile-details p {
+            margin: 0;
+        }
+        .profile-container button {
+            width: 100%;
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+
+        }
+
+        .profile-container button:hover {
+            background: #0056b3;
+        }
+    </style>
+
+
+    <div class="profile-container">
+            <div class="profile-header">
+                <div>
+                    <img class="profile-image" src="/image/<%= users.fotoRegistro %>" alt="fotoPerfil"/>
+                </div>
+                <div class="profile-name">Nombre de Usuario</div>
+            </div>
+            <div class="profile-details">
+                
+                
+                <label>Nombre:</label>
+                <p><%= users.nombre %></p>
+                <label>Apellido:</label>
+                <p><%= users.apellido %></p>
+                <label>Correo Electrónico:</label>
+                <p><%= users.email %></p>
+                
+                
+                <br>
+                <form method="POST" action="/">
+                    <button type="submit" >Editar Usuario</button>
+                </form>
+                <br>
+                <form method="POST" action="/user/eliminar/<%= users.id %>?_method=DELETE">
+                    <button type="submit" >Eliminar Usuario</button>
+                </form>
+                <br>
+                <form method="get" action="/">
+                    <button type="submit" >Cerrar Usuario</button>
+                </form>
+
+            </div>
+    </div>
+</body>
+<%- include ("./partials/footer")%>
+</html>

@@ -4,6 +4,7 @@ const multer = require("multer");
 const path = require("path");
 
 const logMiddleware = require("../middlewares/logMiddlware");
+const registerValidation = require("../middlewares/registerValidation")
 
 const controller = require("../controllers/userController");
 
@@ -22,13 +23,14 @@ const fileUpload = multer({
 })
 
 
-router.get("/",controller.home)
+
 // detalles de Usuario
-router.get("/perfil/:id", logMiddleware,controller.detalle)
+router.get("/perfil", logMiddleware,controller.perfil)
 router.get("/login",controller.login)
+router.post("/login",controller.processLogin)
 //creado de usuario
-router.post("/register",fileUpload.single("fotoRegistro"),controller.processCreate)
 router.get("/register",controller.register)
+router.post("/register",fileUpload.single("fotoRegistro"),registerValidation,controller.processRegister)
 //editar usuario
 router.get("/modifUsuario/:id",controller.editUser)
 router.put("/modifUsuario/:id",fileUpload.single("fotoRegistro"),controller.editProcess) //doonde viaja la informacion

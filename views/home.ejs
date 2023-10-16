@@ -1,12 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include("./partials/head",{title:"STAMPING"}) %>
+<%- include("./partials/head",{title:"Stamping"}) %>
 
 <body>
 
     <%- include("./partials/header") %>
 
+    <style>
+        h1{
+            display: flex;
+            justify-content: center;
+        }
+        main .seccion-productos div{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            text-align: center;
+            align-items: center;
+        }
+         main .seccion-productos div article{
+            width: 33,2%;
+            margin-top: 60px; 
+        }
+        main .seccion-productos div article h2{
+            text-align: center;
+            margin-top: 10px;
+            color: #000;
+            margin-bottom: 30px;
+                
+        }
+    </style>
+    <main>
             <div>
                 <H1>PRODUCTOS</H1>
             </div>
